@@ -33,6 +33,12 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- 整合 Actuator 功能 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
