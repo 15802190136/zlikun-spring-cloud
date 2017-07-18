@@ -1,0 +1,10 @@
+server:
+  port: 8761
+# register-with-eureka 表示是否将自己注册到Eureka Server，默认为：true，因为当前应用就是Eureka Server，所以设为false
+# fetch-registry 表示是否从Eureka Server获取注册信息，默认为：true，因为这里是一个单点的Eureka Server，不需要同步其它Eureka Server节点信息，所以置为false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      default-zone: http://eureka.zlikun.com:8761/eureka/

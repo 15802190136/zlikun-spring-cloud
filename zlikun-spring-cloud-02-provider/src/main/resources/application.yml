@@ -1,0 +1,37 @@
+server:
+  port: 8000
+# spring.application.name 表示注册到Eureka Server上的应用名称
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:scripts/schema.sql
+    data: classpath:scripts/data.sql
+  application:
+    name: microservice-provider-user
+logging:
+  level: info
+  org.hibernate: info
+  org.hibernate.type.descriptor.sql.BasicBinder: trace
+  org.hibernate.type.descriptor.sql.BasicExtractor: trace
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+management:
+  security:
+    enabled: false
+# eureka.instance.prefer-ip-address 表示是否将自己的IP注册到Eureka Server上。如不配置或配置为false，表示注册微服务所在操作系统的hostname到Eureka Server上。
+eureka:
+  client:
+    service-url:
+      default-zone: http://eureka.zlikun.com:8761/eureka/
+  instance:
+    prefer-ip-address: true
