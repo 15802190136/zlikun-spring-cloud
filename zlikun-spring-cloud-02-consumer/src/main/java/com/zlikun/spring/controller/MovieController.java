@@ -22,6 +22,8 @@ public class MovieController {
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id) {
+        // 这里主机名用服务提供者名称代替，从而实现与固定IP(主机名)解绑，配置生效需要在 RestTemplate Bean 上配置 @LoadBalanced
+        // @LoadBalanced 注解的用途后续会讲到
         return restTemplate.getForObject("http://microservice-provider-user/" + id ,User.class) ;
     }
 

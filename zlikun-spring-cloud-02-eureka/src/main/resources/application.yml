@@ -7,4 +7,11 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      default-zone: http://localhost:8761/eureka/
+      default-zone: http://localhost:${server.port}/eureka/
+# 实现basic认证并设置用户名、密码(开启后，客户端无法注册，报401错误，原因未知，留待后续处理)
+security:
+  basic:
+    enabled: false
+  user:
+    name: root
+    password: xxxxxx

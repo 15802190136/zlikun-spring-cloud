@@ -1,13 +1,6 @@
 spring:
   application:
     name: microservice-discovery-eureka-ha
-# 启用 basic 认证(true)，并设置用户名、密码
-security:
-  basic:
-    enabled: true
-  user:
-    name: root
-    password: xxxxxx
 ---
 spring:
   profiles: peer1

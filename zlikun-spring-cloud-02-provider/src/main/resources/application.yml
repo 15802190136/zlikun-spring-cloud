@@ -29,9 +29,12 @@ management:
   security:
     enabled: false
 # eureka.instance.prefer-ip-address 表示是否将自己的IP注册到Eureka Server上。如不配置或配置为false，表示注册微服务所在操作系统的hostname到Eureka Server上。
+# eureka 开启了`basic`认证，所以配置时，需要指定帐号和密码
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:8761/eureka/
+      default-zone: http://root:xxxxxx@localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
   instance:
     prefer-ip-address: true
