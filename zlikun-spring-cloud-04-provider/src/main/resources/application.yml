@@ -1,0 +1,29 @@
+server:
+  port: 8000
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:scripts/schema.sql
+    data: classpath:scripts/data.sql
+  application:
+    name: microservice-provider-user
+logging:
+  level: info
+  org.hibernate: info
+  org.hibernate.type.descriptor.sql.BasicBinder: trace
+  org.hibernate.type.descriptor.sql.BasicExtractor: trace
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      author: zlikun
+      email: zlikun-dev@hotmail.com
+      version: 1.0.0

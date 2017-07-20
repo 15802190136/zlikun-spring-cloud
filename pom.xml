@@ -27,6 +27,9 @@
         <module>zlikun-spring-cloud-03-eureka</module>
         <module>zlikun-spring-cloud-03-provider</module>
         <module>zlikun-spring-cloud-03-consumer</module>
+        <module>zlikun-spring-cloud-04-eureka</module>
+        <module>zlikun-spring-cloud-04-provider</module>
+        <module>zlikun-spring-cloud-04-consumer</module>
     </modules>
 
     <properties>
