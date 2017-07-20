@@ -1,10 +1,39 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha
+  profiles:
+    active: peer
+---
+# 本段用于非集群环境时使用
+spring:
+  profiles: peer
 server:
   port: 8761
-# register-with-eureka 表示是否将自己注册到Eureka Server，默认为：true，因为当前应用就是Eureka Server，所以设为false
-# fetch-registry 表示是否从Eureka Server获取注册信息，默认为：true，因为这里是一个单点的Eureka Server，不需要同步其它Eureka Server节点信息，所以置为false
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
     service-url:
       default-zone: http://localhost:8761/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+---
+spring:
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    service-url:
+      default-zone: http://peer2:8762/eureka/   # 将自己注册到peer2这个Eureka上
+---
+spring:
+  profiles: peer2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    service-url:
+      default-zone: http://peer1:8761/eureka/   # 将自己注册到peer1这个Eureka上
