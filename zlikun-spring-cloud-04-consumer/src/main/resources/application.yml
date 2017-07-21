@@ -9,3 +9,10 @@ eureka:
 spring:
   application:
     name: microservice-consumer-user
+# 配置指定服务的负载均衡策略
+microservice-provider-user:
+  ribbon:
+    # 随机
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    # 轮询(默认)
+    # NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
