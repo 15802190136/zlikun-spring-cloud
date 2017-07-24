@@ -31,6 +31,9 @@
         <module>zlikun-spring-cloud-04-provider</module>
         <module>zlikun-spring-cloud-04-consumer</module>
         <module>zlikun-spring-cloud-04-consumer-feign</module>
+        <module>zlikun-spring-cloud-05-eureka</module>
+        <module>zlikun-spring-cloud-05-provider</module>
+        <module>zlikun-spring-cloud-05-consumer</module>
     </modules>
 
     <properties>

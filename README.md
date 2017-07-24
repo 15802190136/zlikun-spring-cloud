@@ -6,7 +6,8 @@
 - 01 工程组，简单基于spring-cloud实现的服务提供者、消费者示例
 - 02 工程组，引入eureka用于注册、发现服务，配置eureka开启认证
 - 03 工程组，测试多个eureka构成集群工作情况，测试eureka的REST API
-- 04 工程组，测试基于Ribbon实现的负载均衡(配合eureka)
+- 04 工程组，测试基于Ribbon实现的负载均衡(配合eureka)，消费者使用Feign实现声明式REST调用
+- 05 工程组，测试Hystrix实现微服务容错处理
 
 #### Actuator
 > Spring Boot Actuator 提供了很多监控端点，可以使用REST API来访问这些端点，以了解应用程序运行情况。
