@@ -1,0 +1,19 @@
+package com.zlikun.spring.feign;
+
+import com.zlikun.spring.model.User;
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+/**
+ * @auther zlikun <zlikun-dev@hotmail.com>
+ * @date 2017/7/24 9:16
+ */
+@FeignClient("microservice-provider-user")
+public interface UserFeignClient {
+
+    @RequestMapping(value = "/{id}" ,method = RequestMethod.GET)
+    User findById(@PathVariable("id") Long id) ;
+
+}
