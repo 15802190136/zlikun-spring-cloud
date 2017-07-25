@@ -34,6 +34,7 @@
         <module>zlikun-spring-cloud-05-eureka</module>
         <module>zlikun-spring-cloud-05-provider</module>
         <module>zlikun-spring-cloud-05-consumer</module>
+        <module>zlikun-spring-cloud-05-turbine</module>
     </modules>
 
     <properties>

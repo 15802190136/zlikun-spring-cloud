@@ -26,6 +26,3 @@ logging:
   level:
     root: INFO
     com.zlikun.spring.feign: DEBUG
-turbine:
-  app-config: microservice-consumer-user
-  cluster-name-expression: "'default'"
