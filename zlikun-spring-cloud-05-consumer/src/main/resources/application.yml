@@ -26,10 +26,6 @@ logging:
   level:
     root: INFO
     com.zlikun.spring.feign: DEBUG
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+turbine:
+  app-config: microservice-consumer-user
+  cluster-name-expression: "'default'"
