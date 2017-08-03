@@ -1,0 +1,5 @@
+server:
+  port: 8030
+turbine:
+  app-config: microservice-consumer-user
+  cluster-name-expression: "'default'"

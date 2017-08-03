@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.4.RELEASE</version>
+        <version>1.5.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -35,6 +35,10 @@
         <module>zlikun-spring-cloud-05-provider</module>
         <module>zlikun-spring-cloud-05-consumer</module>
         <module>zlikun-spring-cloud-05-turbine</module>
+        <module>zlikun-spring-cloud-06-eureka</module>
+        <module>zlikun-spring-cloud-06-zuul</module>
+        <module>zlikun-spring-cloud-06-provider-user</module>
+        <module>zlikun-spring-cloud-06-consumer</module>
     </modules>
 
     <properties>
