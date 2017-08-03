@@ -9,7 +9,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>zlikun-spring-cloud-06-provider-user</artifactId>
+    <artifactId>zlikun-spring-cloud-06-provider</artifactId>
 
     <dependencies>
 

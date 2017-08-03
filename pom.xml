@@ -37,7 +37,7 @@
         <module>zlikun-spring-cloud-05-turbine</module>
         <module>zlikun-spring-cloud-06-eureka</module>
         <module>zlikun-spring-cloud-06-zuul</module>
-        <module>zlikun-spring-cloud-06-provider-user</module>
+        <module>zlikun-spring-cloud-06-provider</module>
         <module>zlikun-spring-cloud-06-consumer</module>
     </modules>
 
