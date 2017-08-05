@@ -39,6 +39,9 @@
         <module>zlikun-spring-cloud-06-zuul</module>
         <module>zlikun-spring-cloud-06-provider</module>
         <module>zlikun-spring-cloud-06-consumer</module>
+        <module>zlikun-spring-cloud-07-config-server</module>
+        <module>zlikun-spring-cloud-07-eureka</module>
+        <module>zlikun-spring-cloud-07-provider</module>
     </modules>
 
     <properties>
