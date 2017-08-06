@@ -1,4 +1,4 @@
-FROM java
+FROM docker.io/java
 MAINTAINER zlikun <zlikun-dev@hotmail.com>
 
 ENTRYPOINT ["/usr/bin/java", "-jar", "~/studio/server/eureka/eureka.jar"]
