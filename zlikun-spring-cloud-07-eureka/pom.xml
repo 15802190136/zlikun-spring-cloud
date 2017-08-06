@@ -11,6 +11,11 @@
 
     <artifactId>zlikun-spring-cloud-07-eureka</artifactId>
 
+    <properties>
+        <docker.repostory>registry.cn-hangzhou.aliyuncs.com</docker.repostory>
+        <docker.registry.name>zlikun</docker.registry.name>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -18,6 +23,35 @@
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
 
+
     </dependencies>
+
+    <build>
+        <finalName>eureka</finalName>
+        <plugins>
+            <!-- https://github.com/spotify/dockerfile-maven -->
+            <!-- mvn package -->
+            <!-- mvn deploy -->
+            <!-- mvn dockerfile:build -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.3.0</version>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <repository>zlikun/eureka</repository>
+                    <tag>${project.version}</tag>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
